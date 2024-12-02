@@ -324,8 +324,7 @@ export default function Home() {
                 <div className="flex items-center justify-center gap-4">
                   {(token.info?.socials as any)?.website?.url && (
                     <Link
-                      // @ts-ignore
-                      href={token.info.socials?.website?.url}
+                      href={(token.info.socials as any)?.website?.url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-purple-500 hover:text-purple-600"
@@ -365,7 +364,6 @@ export default function Home() {
                   )}
                 </div>
               )}
-              {/* https://photon-sol.tinyastro.io/en/r/@EMILIAN/HJUfqXoYjC653f2p33i84zdCC3jc4EuVnbruSe5kpump */}
               <div>
                 <Button>
                   <Link

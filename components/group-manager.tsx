@@ -170,7 +170,7 @@ export function GroupList() {
       ))}
       {Object.values(groups).length === 0 && (
         <p className="text-sm text-gray-500 text-center">
-          No groups created yet. Click "Create Group" to get started.
+          No groups created yet.
         </p>
       )}
     </div>
