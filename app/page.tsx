@@ -31,14 +31,7 @@ import Link from "next/link";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 
-interface SocialLinks {
-  website?: {
-    url: string;
-  };
-  twitter?: string;
-  telegram?: string;
-  discord?: string;
-}
+
 
 const formatNumber = (num: number) => {
   return new Intl.NumberFormat("en-US", {
@@ -182,7 +175,7 @@ export default function Home() {
       const tokenData = await fetchTokenData(address);
       if (tokenData) {
         // Keep the existing entryData and note while updating the rest
-        const { entryData, note } = tokens[address];
+        const {  note } = tokens[address];
         updateTokenData(address, {
           ...tokenData,
           note,
@@ -221,7 +214,7 @@ export default function Home() {
             duration: 2000,
           });
         })
-        .catch((err) => {
+        .catch(() => {
           toast({
             title: "Error",
             description: "Failed to copy address",
